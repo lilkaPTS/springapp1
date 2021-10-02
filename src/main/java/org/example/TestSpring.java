@@ -13,8 +13,9 @@ public class TestSpring {
         Music music = context.getBean("classicalMusicBean", Music.class);
         MusicPlayer musicPlayer = new MusicPlayer(music);
         musicPlayer.playMusic();
-        musicPlayer = new MusicPlayer(context.getBean("rockMusicBean", Music.class));
-        musicPlayer.playMusic();
+
+        System.out.println("\nDependency Injection");
+        context.getBean("musicPlayer", MusicPlayer.class).playMusic();
         context.close();
     }
 }
