@@ -12,4 +12,11 @@
         <constructor-arg value="Ilya"/>
     </bean>
 
+    <bean id="classicalMusicBean"
+          class="org.example.ClassicalMusic">
+    </bean>
+
+    <bean id="rockMusicBean"
+          class="org.example.RockMusic">
+    </bean>
 </beans>
